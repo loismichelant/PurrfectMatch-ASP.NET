@@ -15,7 +15,7 @@
         <form id="form1" runat="server">
             
             <!-- HEADER -->
-            <div class="header" id="top">
+            <div class="header">
     
                 <!-- Logo -->
                 <div class="header_component" id="comp_logo">

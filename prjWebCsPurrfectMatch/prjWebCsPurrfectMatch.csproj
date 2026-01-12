@@ -77,6 +77,9 @@
     <Content Include="Resources\Images\logo_paw.png" />
     <Content Include="Resources\Images\pic_cat_face.png" />
     <Content Include="Resources\Images\pic_cat_laying.png" />
+    <Content Include="UI\AdoptionRequest.aspx" />
+    <Content Include="UI\CatDetails.aspx" />
+    <Content Include="UI\Home.aspx" />
     <Content Include="UI\Index.aspx" />
     <Content Include="UI\Login.aspx" />
     <Content Include="UI\Register.aspx" />
@@ -96,6 +99,27 @@
     <Compile Include="Models\Request.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\AdoptionRequest.aspx.cs">
+      <DependentUpon>AdoptionRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\AdoptionRequest.aspx.designer.cs">
+      <DependentUpon>AdoptionRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CatDetails.aspx.cs">
+      <DependentUpon>CatDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\CatDetails.aspx.designer.cs">
+      <DependentUpon>CatDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UI\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -132,6 +156,7 @@
     <Folder Include="Helpers\Validations\" />
     <Folder Include="Resources\Styles\" />
     <Folder Include="Services\" />
+    <Folder Include="UI\Admin\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
