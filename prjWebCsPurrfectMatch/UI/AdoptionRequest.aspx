@@ -15,52 +15,53 @@
         <form id="form1" runat="server">
 
             <!-- HEADER -->
-            <div class="header">
+            <div id="header" class="header">
+                <div class="header_box">
 
-                <!-- Logo -->
-                <div class="header_component" id="comp_logo">
-                    <a href="Home.aspx">
-                        <img src="../Resources/Images/logo_name.png" class="logo" alt="Purrfect Match" />
-                    </a>
-                </div>
+                    <!-- Logo -->
+                    <div class="header_block header_logo">
+                        <a href="<%= ResolveUrl("~/UI/Home.aspx") %>">
+                            <img src="../Resources/Images/logo_name.png" class="logo" alt="Purrfect Match" />
+                        </a>
+                    </div>
 
-                <!-- Navigation Links -->
-                <div class="header_component" id="comp_links">
-                    <asp:LinkButton ID="lnkBtnLogout" runat="server" Text="Log Out" CssClass="header_option"></asp:LinkButton>
+                    <!-- Navigation Links -->
+                    <div class="header_block header_links">
+                        <asp:LinkButton ID="lnkBtnLogout" runat="server" Text="Log Out" CssClass="header_link"></asp:LinkButton>
+                    </div>
                 </div>
             </div>
 
-            <!-- MENU -->
-            <div class="menu">
+            <!-- SIDEBAR MENU -->
+            <div id="sidebar" class="sidebar">
 
-                <div class="profile_section">
-                    <a href="#" id="lnk_account">
-                        <img src="../Resources/Images/icon_account.svg" id="img_account" />
+                <div class="sidebar_account">
+                    <a href="#" id="lnkAccount">
+                        <img src="../Resources/Icons/account.svg" id="img_account" />
                     </a>
-                    <div class="profile_text">
-                        <asp:Label ID="lblName" runat="server" CssClass="profile_name"></asp:Label>
-                        <asp:Label ID="lblRole" runat="server" CssClass="profile_role"></asp:Label>
+                    <div class="account_text">
+                        <asp:Label ID="lblName" runat="server" CssClass="account_name"></asp:Label>
+                        <asp:Label ID="lblRole" runat="server" CssClass="account_role"></asp:Label>
                     </div>
                 </div>
 
-                <asp:HyperLink ID="lnkViewCats" NavigateUrl="Home.aspx" runat="server" CssClass="menu_link"><span>View Cats</span></asp:HyperLink>
-                <asp:HyperLink ID="lnkAdopt" NavigateUrl="AdoptionRequest.aspx" runat="server" CssClass="menu_link"><span>Adoption Application</span></asp:HyperLink>
-                <asp:HyperLink ID="lnkDonate" runat="server" CssClass="menu_link"><span>Make a donation</span></asp:HyperLink>
+                <asp:HyperLink ID="lnkHome" NavigateUrl="~/UI/Home.aspx" runat="server" CssClass="sidebar_link"><span>Our Cats</span></asp:HyperLink>
+                <asp:HyperLink ID="lnkAdopt" NavigateUrl="~/UI/AdoptionRequest.aspx" runat="server" CssClass="sidebar_link"><span>Adoption Application</span></asp:HyperLink>
+                <asp:HyperLink ID="lnkDonate" runat="server" CssClass="sidebar_link"><span>Make a donation</span></asp:HyperLink>
             </div>
 
-            <!-- MAIN CONTENT -->
-            <div class="main_content">
+            <!-- CONTENT -->
+            <div id="content" class="content">
 
                 <!-- REQUEST SECTION -->
-                <div class="request_section">
+                <div class="panel panel_requests">
 
-                    <!-- TITRE -->
                     <p class="request_title">Adoption Request</p>
 
                     <!-- SELECT A CAT -->
                     <div class="request_field">
                         <asp:Label ID="lblSelectCat" runat="server" CssClass="request_label" Text="Select a cat :"></asp:Label>
-                        <asp:DropDownList ID="ddLstCats" runat="server" CssClass="request_input"></asp:DropDownList>
+                        <asp:DropDownList ID="ddlCats" runat="server" CssClass="request_input"></asp:DropDownList>
                     </div>
 
                     <!-- APPLICATION LETTER -->
@@ -77,12 +78,12 @@
                 </div>
 
                 <!-- REQUEST HISTORY PANEL -->
-                <asp:Panel ID="pnlRequestHistory" runat="server"  CssClass="section_request_adoption" Visible="false">
+                <asp:Panel ID="pnlRequestHistory" runat="server"  CssClass="panel panel_history" Visible="false">
 
                     <p class="request_title">My Previous Adoption Requests</p>
 
                     <!-- Un Repeater pour afficher chaque demande -->
-                    <asp:Repeater ID="rptrRequests" runat="server">
+                    <asp:Repeater ID="rptRequests" runat="server">
                         <HeaderTemplate>
                             <div class="history_list">
                                 </HeaderTemplate>
@@ -109,7 +110,7 @@
             </div>
 
             <!-- FOOTER -->
-            <div class="footer">
+            <div id="footer" class="footer">
                 <p class="footer_text_top">Find your purrfect match.</p>
 
                 <div class="media_links">

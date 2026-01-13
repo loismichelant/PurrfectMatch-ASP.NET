@@ -51,13 +51,13 @@ namespace prjWebCsPurrfectMatch.UI
         protected global::System.Web.UI.WebControls.Label lblRole;
 
         /// <summary>
-        /// lnkViewCats control.
+        /// lnkHome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink lnkViewCats;
+        protected global::System.Web.UI.WebControls.HyperLink lnkHome;
 
         /// <summary>
         /// lnkAdopt control.
@@ -87,13 +87,13 @@ namespace prjWebCsPurrfectMatch.UI
         protected global::System.Web.UI.WebControls.Label lblSelectCat;
 
         /// <summary>
-        /// ddLstCats control.
+        /// ddlCats control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddLstCats;
+        protected global::System.Web.UI.WebControls.DropDownList ddlCats;
 
         /// <summary>
         /// lblApplicationLetter control.
@@ -141,12 +141,12 @@ namespace prjWebCsPurrfectMatch.UI
         protected global::System.Web.UI.WebControls.Panel pnlRequestHistory;
 
         /// <summary>
-        /// rptrRequests control.
+        /// rptRequests control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptrRequests;
+        protected global::System.Web.UI.WebControls.Repeater rptRequests;
     }
 }

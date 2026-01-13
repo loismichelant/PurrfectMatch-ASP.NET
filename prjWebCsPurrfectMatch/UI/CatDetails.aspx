@@ -15,82 +15,84 @@
         <form id="form1" runat="server">
             
             <!-- HEADER -->
-            <div class="header">
+            <div id="header" class="header">
+                <div class="header_box">
 
-                <!-- Logo -->
-                <div class="header_component" id="comp_logo">
-                    <a href="Home.aspx">
-                        <img src="../Resources/Images/logo_name.png" class="logo" alt="Purrfect Match" />
-                    </a>
-                </div>
+                    <!-- Logo -->
+                    <div class="header_block header_logo">
+                        <a href="<%= ResolveUrl("~/UI/Home.aspx") %>">
+                            <img src="../Resources/Images/logo_name.png" class="logo" alt="Purrfect Match" />
+                        </a>
+                    </div>
 
-                <!-- Navigation Links -->
-                <div class="header_component" id="comp_links">
-                    <asp:LinkButton ID="lnkBtnLogout" runat="server" Text="Log Out" CssClass="header_option"></asp:LinkButton>
+                    <!-- Navigation Links -->
+                    <div class="header_block header_links">
+                        <asp:LinkButton ID="lnkBtnLogout" runat="server" Text="Log Out" CssClass="header_link"></asp:LinkButton>
+                    </div>
                 </div>
             </div>
 
-            <!-- MENU -->
-            <div class="menu">
+            <!-- SIDEBAR MENU -->
+            <div id="sidebar" class="sidebar">
 
-                <div class="profile_section">
-                    <a href="#" id="lnk_account">
-                        <img src="../Resources/Images/icon_account.svg" id="img_account" />
+                <div class="sidebar_account">
+                    <a href="#" id="lnkAccount">
+                        <img src="../Resources/Icons/account.svg" id="img_account" />
                     </a>
-                    <div class="profile_text">
-                        <asp:Label ID="lblName" runat="server" CssClass="profile_name"></asp:Label>
-                        <asp:Label ID="lblRole" runat="server" CssClass="profile_role"></asp:Label>
+                    <div class="account_text">
+                        <asp:Label ID="lblName" runat="server" CssClass="account_name"></asp:Label>
+                        <asp:Label ID="lblRole" runat="server" CssClass="account_role"></asp:Label>
                     </div>
                 </div>
 
-                <asp:HyperLink ID="lnkViewCats" NavigateUrl="Home.aspx" runat="server" CssClass="menu_link"><span>View Cats</span></asp:HyperLink>
-                <asp:HyperLink ID="lnkAdopt" NavigateUrl="AdoptionRequest.aspx" runat="server" CssClass="menu_link"><span>Adoption Application</span></asp:HyperLink>
-                <asp:HyperLink ID="lnkDonate" runat="server" CssClass="menu_link"><span>Make a donation</span></asp:HyperLink>
+                <asp:HyperLink ID="lnkHome" NavigateUrl="~/UI/Home.aspx" runat="server" CssClass="sidebar_link"><span>Our Cats</span></asp:HyperLink>
+                <asp:HyperLink ID="lnkAdopt" NavigateUrl="~/UI/AdoptionRequest.aspx" runat="server" CssClass="sidebar_link"><span>Adoption Application</span></asp:HyperLink>
+                <asp:HyperLink ID="lnkDonate" runat="server" CssClass="sidebar_link"><span>Make a donation</span></asp:HyperLink>
             </div>
 
-            <!-- MAIN CONTENT -->
-            <div class="main_content">
+            <!-- CONTENT -->
+            <div id="content" class="content">
 
                 <!-- DETAILS SECTION -->
-                <div class="details_section">
-                    <p class="cat_name">
+                <div class="panel panel_details">
+                    <p class="cat_details_name">
                         <asp:Label ID="lblCatName" runat="server"></asp:Label>
                     </p>
     
-                    <div id="section_row">
+                    <div id="panel_row">
         
                         <!-- IMAGE DU CHAT -->
-                        <asp:Image ID="imgCat" runat="server" CssClass="cat_img" />
+                        <asp:Image ID="imgCat" runat="server" CssClass="cat_details_img" />
 
                         <!-- INFO PRINCIPALE -->
-                        <div class="cat_info">
+                        <div class="cat_details_info">
 
-                            <p class="cat_line">
-                                <img src="../Resources/Images/logo_paw.png" class="paw_icon" />
+                            <p class="cat_row">
+                                <img src="../Resources/Images/logo_paw.png" class="paw_details_icon" />
                                 <asp:Label ID="lblGenderAndAge" runat="server"></asp:Label>
                             </p>
 
-                            <p class="cat_line">
-                                <img src="../Resources/Images/logo_paw.png" class="paw_icon" />
+                            <p class="cat_row">
+                                <img src="../Resources/Images/logo_paw.png" class="paw_details_icon" />
                                 Fur Color :
                                 <asp:Label ID="lblFurColor" runat="server"></asp:Label>
                             </p>
 
-                            <p class="cat_line">
-                                <img src="../Resources/Images/logo_paw.png" class="paw_icon" />
+                            <p class="cat_row">
+                                <img src="../Resources/Images/logo_paw.png" class="paw_details_icon" />
                                 Fur Length :
                                 <asp:Label ID="lblFurLength" runat="server"></asp:Label>
                             </p>
 
-                            <p class="cat_line">
-                                <img src="../Resources/Images/logo_paw.png" class="paw_icon" />
+                            <p class="cat_row">
+                                <img src="../Resources/Images/logo_paw.png" class="paw_details_icon" />
                                 Energy Level :
                                 <asp:Label ID="lblEnergy" runat="server"></asp:Label>
                             </p>
 
                             <!-- COMPATIBILITÉS -->
                             <p class="cat_compat">
-                                <img src="../Resources/Images/logo_paw.png" class="paw_icon" />
+                                <img src="../Resources/Images/logo_paw.png" class="paw_details_icon" />
                                 Compatibility :
 
                             </p>
@@ -111,20 +113,20 @@
                         </div>
                     </div>
 
-                    <div id="section_last">
+                    <div class="panel_end">
                         <!-- DESCRIPTION -->
-                        <p class="cat_description">
+                        <p class="cat_details_description">
                             <asp:Label ID="lblDescription" runat="server"></asp:Label>
                         </p>
 
                         <!-- DEMANDE D’ADOPTION -->
-                        <asp:HyperLink ID="btnAdoption" runat="server" CssClass="button" Text="Apply for Adoption" />
+                        <asp:HyperLink ID="btnAdoption" runat="server" CssClass="btn_details_cats" Text="Apply for Adoption" />
                     </div>
                 </div>
             </div>
 
             <!-- FOOTER -->
-            <div class="footer">
+            <div id="footer" class="footer">
                 <p class="footer_text_top">Find your purrfect match.</p>
 
                 <div class="media_links">

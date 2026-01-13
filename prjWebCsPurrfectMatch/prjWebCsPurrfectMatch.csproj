@@ -77,6 +77,8 @@
     <Content Include="Resources\Images\logo_paw.png" />
     <Content Include="Resources\Images\pic_cat_face.png" />
     <Content Include="Resources\Images\pic_cat_laying.png" />
+    <Content Include="Resources\Styles\Home.css" />
+    <Content Include="UI\AccountDetails.aspx" />
     <Content Include="UI\AdoptionRequest.aspx" />
     <Content Include="UI\CatDetails.aspx" />
     <Content Include="UI\Home.aspx" />
@@ -99,6 +101,13 @@
     <Compile Include="Models\Request.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\AccountDetails.aspx.cs">
+      <DependentUpon>AccountDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\AccountDetails.aspx.designer.cs">
+      <DependentUpon>AccountDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UI\AdoptionRequest.aspx.cs">
       <DependentUpon>AdoptionRequest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -154,7 +163,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Helpers\Validations\" />
-    <Folder Include="Resources\Styles\" />
     <Folder Include="Services\" />
     <Folder Include="UI\Admin\" />
   </ItemGroup>

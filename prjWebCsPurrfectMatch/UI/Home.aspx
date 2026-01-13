@@ -15,105 +15,107 @@
         <form id="form1" runat="server">
 
             <!-- HEADER -->
-            <div class="header" id="top">
+            <div id="header" class="header">
+                <div class="header_box">
 
-                <!-- Logo -->
-                <div class="header_component" id="comp_logo">
-                    <a href="#top">
-                        <img src="../Resources/Images/logo_name.png" class="logo" alt="Purrfect Match" />
-                    </a>
-                </div>
-
-                <!-- Navigation Links -->
-                <div class="header_component" id="comp_links">
-                    <asp:LinkButton ID="lnkBtnLogout" runat="server" Text="Log Out" CssClass="header_option"></asp:LinkButton>
+                    <!-- Logo -->
+                    <div class="header_block header_logo">
+                        <a href="#header">
+                            <img src="../Resources/Images/logo_name.png" class="logo" alt="Purrfect Match" />
+                        </a>
+                    </div>
+                     
+                    <!-- Navigation Links -->
+                    <div class="header_block header_links">
+                        <asp:LinkButton ID="lnkBtnLogout" runat="server" Text="Log Out" CssClass="header_link"></asp:LinkButton>
+                    </div>
                 </div>
             </div>
 
-            <!-- MENU -->
-            <div class="menu">
+            <!-- SIDEBAR MENU -->
+            <div id="sidebar" class="sidebar">
 
-                <div class="profile_section">
-                    <a href="#" id="lnk_account">
-                        <img src="../Resources/Images/icon_account.svg" id="img_account" />
+                <div class="sidebar_account">
+                    <a href="#" id="lnkAccount">
+                        <img src="../Resources/Icons/account.svg" id="img_account" />
                     </a>
-                    <div class="profile_text">
-                        <asp:Label ID="lblName" runat="server" CssClass="profile_name"></asp:Label>
-                        <asp:Label ID="lblRole" runat="server" CssClass="profile_role"></asp:Label>
+                    <div class="account_text">
+                        <asp:Label ID="lblName" runat="server" CssClass="account_name"></asp:Label>
+                        <asp:Label ID="lblRole" runat="server" CssClass="account_role"></asp:Label>
                     </div>
                 </div>
 
-                <asp:HyperLink ID="lnkViewCats" NavigateUrl="Home.aspx" runat="server" CssClass="menu_link"><span>View Cats</span></asp:HyperLink>
-                <asp:HyperLink ID="lnkAdopt" NavigateUrl="AdoptionRequest.aspx" runat="server" CssClass="menu_link"><span>Adoption Application</span></asp:HyperLink>
-                <asp:HyperLink ID="lnkDonate" runat="server" CssClass="menu_link"><span>Make a donation</span></asp:HyperLink>
+                <asp:HyperLink ID="lnkHome" NavigateUrl="~/UI/Home.aspx" runat="server" CssClass="sidebar_link"><span>Our Cats</span></asp:HyperLink>
+                <asp:HyperLink ID="lnkAdopt" NavigateUrl="~/UI/AdoptionRequest.aspx" runat="server" CssClass="sidebar_link"><span>Adoption Application</span></asp:HyperLink>
+                <asp:HyperLink ID="lnkDonate" runat="server" CssClass="sidebar_link"><span>Make a donation</span></asp:HyperLink>
             </div>
 
-            <!-- MAIN CONTENT -->
-            <div class="main_content">
+            <!-- CONTENT -->
+            <div id="content" class="content">
 
                 <!-- CRITERIA SELECTION BOX -->
-                <div class="criteria_selection_box">
+                <div class="panel_filters">
 
                     <!-- GENDER -->
-                    <div class="criteria_box">
-                        <asp:Label ID="lblCriteriaGender" runat="server" CssClass="criteria_input_label" Text="Gender"></asp:Label>
-                        <asp:DropDownList ID="ddLstGender" runat="server" CssClass="criteria_input"></asp:DropDownList>
+                    <div class="filter">
+                        <asp:Label ID="lblCriteriaGender" runat="server" CssClass="filter_label" Text="Gender"></asp:Label>
+                        <asp:DropDownList ID="ddlGender" runat="server" CssClass="filter_input"></asp:DropDownList>
                     </div>
 
                     <!-- AGE GROUP -->
-                    <div class="criteria_box">
-                        <asp:Label ID="lblCriteriaAge" runat="server" CssClass="criteria_input_label" Text="Age Group"></asp:Label>
-                        <asp:DropDownList ID="ddLstAgeGroup" runat="server" CssClass="criteria_input"></asp:DropDownList>
+                    <div class="filter">
+                        <asp:Label ID="lblCriteriaAge" runat="server" CssClass="filter_label" Text="Age Group"></asp:Label>
+                        <asp:DropDownList ID="ddlAgeGroup" runat="server" CssClass="filter_input"></asp:DropDownList>
                     </div>
 
                     <!-- FUR LENGTH -->
-                    <div class="criteria_box">
-                        <asp:Label ID="lblCriteriaFurLength" runat="server" CssClass="criteria_input_label" Text="Fur Length"></asp:Label>
-                        <asp:DropDownList ID="ddLstFurLength" runat="server" CssClass="criteria_input"></asp:DropDownList>
+                    <div class="filter">
+                        <asp:Label ID="lblCriteriaFurLength" runat="server" CssClass="filter_label" Text="Fur Length"></asp:Label>
+                        <asp:DropDownList ID="ddlFurLength" runat="server" CssClass="filter_input"></asp:DropDownList>
                     </div>
 
                     <!-- FUR COLOR -->
-                    <div class="criteria_box">
-                        <asp:Label ID="lblCriteriaFurColor" runat="server" CssClass="criteria_input_label" Text="Fur Color"></asp:Label>
-                        <asp:DropDownList ID="ddLstFurColor" runat="server" CssClass="criteria_input"></asp:DropDownList>
+                    <div class="filter">
+                        <asp:Label ID="lblCriteriaFurColor" runat="server" CssClass="filter_label" Text="Fur Color"></asp:Label>
+                        <asp:DropDownList ID="ddlFurColor" runat="server" CssClass="filter_input"></asp:DropDownList>
                     </div>
 
                     <!-- ENERGY LEVEL -->
-                    <div class="criteria_box">
-                        <asp:Label ID="lblCriteriaEnergyLevel" runat="server" CssClass="criteria_input_label" Text="Energy Level"></asp:Label>
-                        <asp:DropDownList ID="ddLstEnergyLevel" runat="server" CssClass="criteria_input"></asp:DropDownList>
+                    <div class="filter">
+                        <asp:Label ID="lblCriteriaEnergyLevel" runat="server" CssClass="filter_label" Text="Energy Level"></asp:Label>
+                        <asp:DropDownList ID="ddlEnergyLevel" runat="server" CssClass="filter_input"></asp:DropDownList>
                     </div>
 
                     <!-- COMPATIBILITIES -->
-                    <div class="criteria_box_checkbox">
-                        <asp:Label ID="lblCriteriaCompatibility" runat="server" CssClass="criteria_input_label" Text="Compatibility"></asp:Label>
-                        <asp:CheckBoxList ID="chkBxLstCompatibility" RepeatDirection="Horizontal" runat="server" CssClass="criteria_input"></asp:CheckBoxList>
+                    <div class="filter filter_checkboxes">
+                        <asp:Label ID="lblCriteriaCompatibility" runat="server" CssClass="filter_label" Text="Compatibility"></asp:Label>
+                        <asp:CheckBoxList ID="cblCompatibility" runat="server" RepeatDirection="Horizontal" CssClass="filter_input"></asp:CheckBoxList>
                     </div>
 
                     <!-- BUTTON FILTER -->
-                    <div class="criteria_row_button">
-                        <asp:Button ID="btnApplyFilters" runat="server" Text="Apply Filters" CssClass="btn_main" />
+                    <div class="filters_actions">
+                        <asp:Button ID="btnApplyFilters" runat="server" Text="Apply Filters" CssClass="btn_filter" />
                     </div>
                 </div>
 
                 <!-- CAT CARDS -->
-                <div class="criteria_selection_box">
-                    <asp:Repeater ID="rptrCatProfiles" runat="server">
+                <div class="panel cats_grid">
+                    <asp:Repeater ID="rptCats" runat="server">
                         <ItemTemplate>
                             <div class="cat_card">
-                                <img src='<%# Eval("PictureURL") %>' alt="Cat Picture" class="cat_img" />
-                                <div class="cat_info">
-                                    <p class="cat_name"><%# Eval("Name") %></p>
-                                    <p class="cat_gender">
-                                        <span class="cat_icon_paw"></span>
+                                <img src='<%# Eval("PictureURL") %>' class="img_card_cat" alt="Cat Picture" />
+                                <div class="cat_card_info">
+                                    <p class="cat_card_name"><%# Eval("Name") %></p>
+                                    <p class="cat_card_gender">
+                                        <span class="cat_card_icon_paw"></span>
                                         <%# Eval("Gender") %>
                                     </p>
-                                    <p class="cat_age">
-                                        <span class="cat_icon_paw"></span>
+                                    <p class="cat_card_age">
+                                        <span class="cat_card_icon_paw"></span>
                                         <%# Eval("FormattedAge") %>
                                     </p>
                                 </div>
-                                <asp:HyperLink ID="lnkViewCatDetails" runat="server" CssClass="btn_go_catdetails" NavigateUrl='<%# "~/UI/CatDetails.aspx?id=" + Eval("CatId") %>' Text="View Details" />
+                                <asp:HyperLink ID="lnkCatDetails" runat="server" CssClass="btn_card_cats" NavigateUrl='<%# "~/UI/CatDetails.aspx?id=" + Eval("CatId") %>' Text="View Details" />
                             </div>
                         </ItemTemplate>
                     </asp:Repeater>
@@ -122,7 +124,7 @@
             </div>
 
             <!-- FOOTER -->
-            <div class="footer">
+            <div id="footer" class="footer">
                 <p class="footer_text_top">Find your purrfect match.</p>
 
                 <div class="media_links">

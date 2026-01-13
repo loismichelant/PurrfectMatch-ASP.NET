@@ -51,13 +51,13 @@ namespace prjWebCsPurrfectMatch.UI
         protected global::System.Web.UI.WebControls.Label lblRole;
 
         /// <summary>
-        /// lnkViewCats control.
+        /// lnkHome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink lnkViewCats;
+        protected global::System.Web.UI.WebControls.HyperLink lnkHome;
 
         /// <summary>
         /// lnkAdopt control.
@@ -87,13 +87,13 @@ namespace prjWebCsPurrfectMatch.UI
         protected global::System.Web.UI.WebControls.Label lblCriteriaGender;
 
         /// <summary>
-        /// ddLstGender control.
+        /// ddlGender control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddLstGender;
+        protected global::System.Web.UI.WebControls.DropDownList ddlGender;
 
         /// <summary>
         /// lblCriteriaAge control.
@@ -105,13 +105,13 @@ namespace prjWebCsPurrfectMatch.UI
         protected global::System.Web.UI.WebControls.Label lblCriteriaAge;
 
         /// <summary>
-        /// ddLstAgeGroup control.
+        /// ddlAgeGroup control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddLstAgeGroup;
+        protected global::System.Web.UI.WebControls.DropDownList ddlAgeGroup;
 
         /// <summary>
         /// lblCriteriaFurLength control.
@@ -123,13 +123,13 @@ namespace prjWebCsPurrfectMatch.UI
         protected global::System.Web.UI.WebControls.Label lblCriteriaFurLength;
 
         /// <summary>
-        /// ddLstFurLength control.
+        /// ddlFurLength control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddLstFurLength;
+        protected global::System.Web.UI.WebControls.DropDownList ddlFurLength;
 
         /// <summary>
         /// lblCriteriaFurColor control.
@@ -141,13 +141,13 @@ namespace prjWebCsPurrfectMatch.UI
         protected global::System.Web.UI.WebControls.Label lblCriteriaFurColor;
 
         /// <summary>
-        /// ddLstFurColor control.
+        /// ddlFurColor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddLstFurColor;
+        protected global::System.Web.UI.WebControls.DropDownList ddlFurColor;
 
         /// <summary>
         /// lblCriteriaEnergyLevel control.
@@ -159,13 +159,13 @@ namespace prjWebCsPurrfectMatch.UI
         protected global::System.Web.UI.WebControls.Label lblCriteriaEnergyLevel;
 
         /// <summary>
-        /// ddLstEnergyLevel control.
+        /// ddlEnergyLevel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddLstEnergyLevel;
+        protected global::System.Web.UI.WebControls.DropDownList ddlEnergyLevel;
 
         /// <summary>
         /// lblCriteriaCompatibility control.
@@ -177,13 +177,13 @@ namespace prjWebCsPurrfectMatch.UI
         protected global::System.Web.UI.WebControls.Label lblCriteriaCompatibility;
 
         /// <summary>
-        /// chkBxLstCompatibility control.
+        /// cblCompatibility control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList chkBxLstCompatibility;
+        protected global::System.Web.UI.WebControls.CheckBoxList cblCompatibility;
 
         /// <summary>
         /// btnApplyFilters control.
@@ -195,12 +195,12 @@ namespace prjWebCsPurrfectMatch.UI
         protected global::System.Web.UI.WebControls.Button btnApplyFilters;
 
         /// <summary>
-        /// rptrCatProfiles control.
+        /// rptCats control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptrCatProfiles;
+        protected global::System.Web.UI.WebControls.Repeater rptCats;
     }
 }
