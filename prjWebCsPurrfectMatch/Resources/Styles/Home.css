@@ -3,13 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 :root {
     --bg: #f6e6d5;
-    --brand-1: #d7805a; /* header / accents */
-    --brand-2: #9f5838; /* footer */
-    --brand-3: #622815; /* text dark */
-    --brand-4: #f4a76f; /* sidebar */
+    --brand-1: #d7805a;
+    --brand-2: #9f5838;
+    --brand-3: #622815;
+    --brand-4: #f4a76f;
 
-    --surface: #fffdf8; /* panels */
-    --surface-2: #f4c6a3; /* cards */
+    --surface: #fffdf8;
+    --surface-2: #f4c6a3;
 
     --border: #e2c1ae;
     --shadow-1: 0 4px 10px rgba(0,0,0,0.1);
@@ -20,6 +20,7 @@
     --radius-2: 12px;
     --radius-3: 18px;
     --radius-4: 20px;
+    /* IN PROGRESS */
 }
 
 /* === LAYOUT & GENERAL === */
@@ -282,10 +283,196 @@ a, a:visited, a:hover, a:active, a:focus {
     flex-direction: column;
 }
 
-/* Titles used across panels */
+/* Text styles used across panels */
+.message {
+    font-family: monospace;
+    font-size: 0.8rem;
+    display: block;
+}
+
+.filter_label {
+    font-weight: 500;
+    font-family: "Baloo 2", sans-serif;
+    color: #622815;
+    font-size: 0.9rem;
+}
+
+.request_title {
+    font-family: "Baloo 2", sans-serif;
+    margin: 0;
+    color: #d7805a;
+    letter-spacing: 1px;
+}
+
+.adoption_title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.history_title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.request_label {
+    font-family: "Baloo 2", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #8c4f33;
+}
+
+.cat_details_name {
+    font-family: "Baloo 2", sans-serif;
+    font-size: 2.5rem;
+    margin: 0;
+    color: #622815;
+    text-align: left;
+    font-weight: 800;
+}
+
+.account_details_title {
+    font-family: "Baloo 2", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #d7805a;
+}
+
+.account_details_subtitle {
+    font-family: "Baloo 2", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #8c4f33;
+}
+
+.account_details_label {
+    width: 200px; /* plus large */
+    font-weight: 600;
+    font-size: 1rem;
+}
 
 /* Buttons (shared-ish) */
+.btn_filter {
+    padding: 5px 30px;
+    border-radius: 10px;
+    background-color: #f8d7be;
+    border: none;
+    color: #8c4f33;
+    font-family: "Baloo 2", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: -10px;
+}
 
+.btn_filter:hover {
+    background-color: #f1c5a3;
+}
+
+.btn_card_cats {
+    margin-top: 12px;
+    padding: 6px 14px;
+    background-color: #d7805a;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: "Baloo 2", sans-serif;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn_card_cats:hover {
+    background-color: #bb6a48;
+    transform: translateY(-2px);
+}
+
+.btn_request {
+    margin-top: 10px;
+    align-self: center;
+    padding: 10px 26px;
+    border-radius: 12px;
+    background-color: #d7805a;
+    border: none;
+    color: white;
+    font-family: "Baloo 2", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.btn_request:hover {
+    background-color: #bb6a48;
+    transform: translateY(-2px);
+}
+
+.btn_request:active {
+    transform: translateY(0);
+}
+
+.btn_request:focus {
+    outline: none;
+    box-shadow: 0 0 6px rgba(215,128,90,0.6);
+}
+
+.btn_details_cats {
+    padding: 10px 22px;
+    border-radius: 12px;
+    background-color: #d7805a;
+    border: none;
+    cursor: pointer;
+    font-family: "Baloo 2", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.btn_details_cats:hover {
+    background-color: #bb6a48;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.btn_account,
+.btn_account_danger {
+    margin-top: 10px;
+    padding: 10px 22px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-family: "Baloo 2", sans-serif;
+    font-size: 1rem;
+    transition: 0.2s ease;
+}
+
+.btn_account {
+    background-color: #d7805a;
+    color: white;
+}
+
+.btn_account:hover {
+    background-color: #bb6a48;
+    transform: translateY(-2px);
+}
+
+.btn_account_danger {
+    background-color: #c0392b;
+    color: #fff7eb;
+}
+
+.btn_account_danger:hover {
+    background-color: #992d22;
+    transform: translateY(-2px);
+}
 
 /** === 1.4 FOOTER === **/
 .footer {
@@ -369,6 +556,40 @@ a, a:visited, a:hover, a:active, a:focus {
     align-items: flex-start;
 }
 
+.filter {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+    min-height: 80px;
+    justify-content: center;
+}
+
+.filter_checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1.5;
+    min-height: 80px;
+    justify-content: center;
+}
+
+.filter_input {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #e2c1ae;
+    background-color: #fffdf8;
+    color: #622815;
+    font-size: 0.75rem;
+    font-family: monospace;
+}
+
+.filter_actions {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .cats_grid {
     padding: 30px 55px;
     flex-wrap: wrap;
@@ -377,9 +598,255 @@ a, a:visited, a:hover, a:active, a:focus {
     align-items: flex-start;
 }
 
+.cat_card {
+    width: 250px;
+    background-color: #f4c6a3;
+    border-radius: 18px;
+    padding: 15px;
+    color: #622815;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cat_card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.img_card_cat {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.cat_card_info {
+    width: 100%;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.cat_card_name {
+    font-family: "Baloo 2", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0;
+    padding-left: 10px;
+}
+
+.cat_card_gender,
+.cat_card_age {
+    margin: 0;
+    padding-left: 15px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.cat_card_icon_paw {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url("../Images/logo_paw.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 6px;
+    vertical-align: middle;
+    filter: brightness(0) saturate(100%) invert(22%) sepia(17%) saturate(1300%) hue-rotate(336deg) brightness(92%) contrast(85%);
+}
+
 
 /* === 3. SPECIFIC TO ADOPTION REQUEST PAGE === */
+.request_field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.request_input {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #e2c1ae;
+    background-color: #fffdf8;
+    color: #622815;
+    font-size: 0.95rem;
+    font-family: "Open Sans", sans-serif;
+    cursor: pointer;
+}
+
+.request_input:focus {
+    outline: none;
+    border-color: #d7805a;
+    box-shadow: 0 0 4px rgba(215,128,90,0.4);
+}
+
+.request_textarea {
+    padding: 12px 15px;
+    border-radius: 12px;
+    border: 1px solid #e2c1ae;
+    background-color: #fffdf8;
+    font-size: 0.95rem;
+    font-family: "Open Sans", sans-serif;
+    resize: vertical;
+    min-height: 150px;
+}
+
+.request_textarea:focus {
+    outline: none;
+    border-color: #d7805a;
+    box-shadow: 0 0 4px rgba(215,128,90,0.3);
+}
+
+.request_confirmation {
+    margin-top: -5px;
+    margin-left: 5px;
+}
+
+.history_list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.history_item {
+    background: #ffffffc4;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.history_item hr {
+    opacity: 0.3;
+}
+
+
 /* === 4. SPECIFIC TO CAT DETAILS PAGE === */
+#panel_row {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.cat_details_img {
+    width: 350px;
+    height: 300px;
+    border-radius: 18px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    flex-shrink: 0;
+}
+
+.cat_details_info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.cat_row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.paw_details_icon {
+    width: 15px;
+    filter: brightness(0) saturate(100%) invert(19%) sepia(42%) saturate(537%) hue-rotate(340deg) brightness(91%) contrast(86%);
+}
+
+.cat_compat {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.compat_list {
+    padding-left: 20px;
+    margin: 0;
+    margin-left: 20px;
+    list-style: disc;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.compat_list li {
+    margin-bottom: 5px;
+}
+
+.panel_end {
+    display: flex;
+    flex-direction: column;
+}
+
+.cat_details_description {
+    background: #fff4e7;
+    padding: 15px 18px;
+    border-radius: 10px;
+    line-height: 1.45rem;
+    margin-top: 30px;
+}
+
+
 /* === 5. SPECIFIC TO ACCOUNT DETAILS PAGE === */
+.panel_account {
+    background-color: #fffdf8;
+    margin: 40px auto;
+    padding: 40px 60px;
+    border-radius: 22px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.07);
+    color: #622815;
+    font-family: "Open Sans", sans-serif;
+    width: 80%;
+    max-width: 1100px;
+}
 
+.account_details_section {
+    background-color: #fff;
+    padding: 25px 35px;
+    margin-bottom: 35px;
+    box-shadow: 0 6px 16px rgba(160, 98, 70, 0.15);
+    border-left: 6px solid #d7805a;
+    padding-left: 30px;
+}
 
+.account_details_item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 16px;
+}
+
+.account_details_value {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.account_details_input {
+    padding: 9px 14px;
+    border-radius: 10px;
+    border: 1px solid #e2c1ae;
+    background: #fff;
+    color: #622815;
+    font-size: 0.95rem;
+    width: 320px;
+}
+
+.account_confirmation {
+    margin-top: 8px;
+}
+
+.danger_zone {
+    border-top: 2px solid #e6c7b0;
+    padding-top: 25px;
+    margin-top: 35px;
+}
+
+.danger_zone .danger {
+    color: #b6382f;
+}

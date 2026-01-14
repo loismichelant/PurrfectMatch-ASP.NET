@@ -77,6 +77,7 @@
     <Content Include="Resources\Images\logo_paw.png" />
     <Content Include="Resources\Images\pic_cat_face.png" />
     <Content Include="Resources\Images\pic_cat_laying.png" />
+    <Content Include="Resources\Styles\Global.css" />
     <Content Include="Resources\Styles\Home.css" />
     <Content Include="UI\AccountDetails.aspx" />
     <Content Include="UI\AdoptionRequest.aspx" />

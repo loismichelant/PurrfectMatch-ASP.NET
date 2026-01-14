@@ -16,24 +16,25 @@
             
             <!-- HEADER -->
             <div class="header">
+                <div class="header_box">
     
-                <!-- Logo -->
-                <div class="header_component" id="comp_logo">
-                    <a href="Index.aspx">
-                        <img src="../Resources/Images/logo_name.png" class="logo" alt="Purrfect Match" />
-                    </a>
-                </div>
+                    <!-- Logo -->
+                    <div class="header_block header_logo_form">
+                        <a href="Index.aspx">
+                            <img src="../Resources/Images/logo_name.png" class="logo_form" alt="Purrfect Match" />
+                        </a>
+                    </div>
     
-                <!-- Navigation Links -->
-                <div class="header_component" id="comp_links">
-                    <asp:HyperLink ID="lnkLogin1" runat="server" NavigateUrl="~/UI/Login.aspx" Text="Log In" CssClass="header_option"></asp:HyperLink>
-                    <asp:HyperLink ID="lnkIndex" runat="server" NavigateUrl="~/UI/Index.aspx" Text="Return" CssClass="header_option"></asp:HyperLink>
+                    <!-- Navigation Links -->
+                    <div class="header_block header_links_form">
+                        <asp:HyperLink ID="lnkLogin1" runat="server" NavigateUrl="~/UI/Login.aspx" Text="Log In" CssClass="header_link"></asp:HyperLink>
+                        <asp:HyperLink ID="lnkIndex" runat="server" NavigateUrl="~/UI/Index.aspx" Text="Return" CssClass="header_link"></asp:HyperLink>
+                    </div>
                 </div>
-
             </div>
 
             <!-- MAIN CONTENT -->
-            <div class="main_content">
+            <div id="content" class="content">
                 <div class="form_register">
     
                     <h2 class="register_title">JOIN OUR COMMUNITY</h2>

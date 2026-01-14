@@ -1,0 +1,196 @@
+﻿
+/* === IMPORTS & BASE === */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --bg: #f6e6d5;
+    --brand-1: #d7805a;
+    --brand-2: #9f5838;
+    --brand-3: #622815;
+    --brand-4: #f4a76f;
+    --surface: #fffdf8;
+    --surface-2: #f4c6a3;
+    --border: #e2c1ae;
+    --shadow-1: 0 4px 10px rgba(0,0,0,0.1);
+    --shadow-2: 0 4px 12px rgba(0,0,0,0.08);
+    --shadow-3: 0 6px 20px rgba(0,0,0,0.12);
+    --sidebar-w: 300px;
+    --radius-1: 10px;
+    --radius-2: 12px;
+    --radius-3: 18px;
+    --radius-4: 20px;
+    /* IN PROGRESS */
+}
+
+/* === LAYOUT & GENERAL === */
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    color: #ffffff;
+    background-color: #d7805a;
+}
+
+a, a:visited, a:hover, a:active, a:focus {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* === 1. SHARED CSS CLASSES === */
+
+/** === 1.1 HEADER === **/
+.header {
+    background-color: #f4a76f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.header_box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2% 3%;
+}
+
+.header_block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header_logo_form{
+    text-align: center;
+    flex-grow: 1;
+}
+
+.logo_form {
+    width: 400px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    transform-origin: center;
+}
+
+.header_links_form {
+    position: absolute;
+    right: 50px;
+    display: flex;
+    gap: 15px;
+}
+
+.header_logo_form a:hover .logo_form,
+.header_logo_form .logo_form:hover {
+    transform: scale(1.04);
+}
+
+.header_link {
+    position: relative;
+    display: inline-block;
+    font-family: "Baloo 2", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    cursor: pointer;
+    padding-left: 38px;
+    transition: color 0.25s ease-in-out, transform 0.25s ease-in-out;
+    text-decoration: none;
+}
+
+.header_link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(-6px);
+    width: 26px;
+    height: 26px;
+    background-image: url("../Images/logo_paw.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    filter: brightness(0) saturate(100%) invert(19%) sepia(42%) saturate(537%) hue-rotate(340deg) brightness(91%) contrast(86%);
+}
+
+.header_link:hover::before,
+.header_link.active::before {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+.header_link:hover {
+    color: #622815;
+    transform: translateX(3px);
+}
+
+/** === 1.2 CONTENT / PANELS === **/
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+/* Text styles used across panels */
+
+/* Buttons (shared-ish) */
+
+/** === 1.3 FOOTER === **/
+
+
+/* === 2. SPECIFIC TO INDEX PAGE === */
+.header_index {
+    background-color: #f4a76f;
+    padding: 10px 0 20px 0;
+    margin-bottom: 40px;
+}
+
+.header_logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.header_links {
+    display: flex;
+    gap: 60px;
+    flex: 2;
+    justify-content: flex-end;
+}
+
+.logo {
+    height: auto;
+    width: 600px;
+    margin-right: 5px;
+    margin-top: -10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    transform-origin: center;
+}
+
+.header_logo a:hover .logo,
+.header_logo .logo:hover {
+    transform: scale(1.04);
+}
+
+.content_index {
+
+}
+
+
+/* === 3. SPECIFIC TO LOGIN PAGE === */
+.form_login {
+    color: #622815;
+}
+
+
+/* === 4. SPECIFIC TO REGISTER PAGE === */
+.form_register {
+    color: #622815;
+}
+

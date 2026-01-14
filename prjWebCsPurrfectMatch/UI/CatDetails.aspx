@@ -36,7 +36,7 @@
             <div id="sidebar" class="sidebar">
 
                 <div class="sidebar_account">
-                    <a href="#" id="lnkAccount">
+                    <a href="<%= ResolveUrl("~/UI/AccountDetails.aspx") %>" id="lnkAccount">
                         <img src="../Resources/Icons/account.svg" id="img_account" />
                     </a>
                     <div class="account_text">

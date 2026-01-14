@@ -15,26 +15,28 @@
         <form id="form1" runat="server">
 
             <!-- HEADER -->
-            <div class="header" id="top">
+            <div class="header_index" id="header">
+                <div class="header_box">
                 
-                <!-- Logo -->
-                <div class="header_component" id="comp_logo">
-                    <a href="#top">
-                        <img src="../Resources/Images/logo_name.png" class="logo" alt="Purrfect Match" />
-                    </a>
-                </div>
+                    <!-- Logo -->
+                    <div class="header_block header_logo">
+                        <a href="#header">
+                            <img src="../Resources/Images/logo_name.png" class="logo" alt="Purrfect Match" />
+                        </a>
+                    </div>
                 
-                <!-- Navigation Links -->
-                <div class="header_component" id="comp_links">
-                    <asp:HyperLink ID="lnkJoin" runat="server" NavigateUrl="#top_join" Text="Join The Family" CssClass="header_option"></asp:HyperLink>
-                    <asp:HyperLink ID="lnkStory" runat="server" NavigateUrl="#top_story" Text="Our Story" CssClass="header_option"></asp:HyperLink>
-                    <asp:HyperLink ID="lnkContact" runat="server" NavigateUrl="#top_contact" Text="Contact Us" CssClass="header_option"></asp:HyperLink>
+                    <!-- Navigation Links -->
+                    <div class="header_block header_links">
+                        <asp:HyperLink ID="lnkJoin" runat="server" NavigateUrl="#top_join" Text="Join The Family" CssClass="header_link"></asp:HyperLink>
+                        <asp:HyperLink ID="lnkStory" runat="server" NavigateUrl="#top_story" Text="Our Story" CssClass="header_link"></asp:HyperLink>
+                        <asp:HyperLink ID="lnkContact" runat="server" NavigateUrl="#top_contact" Text="Contact Us" CssClass="header_link"></asp:HyperLink>
+                    </div>
                 </div>
 
             </div>
 
             <!-- MAIN CONTENT -->
-            <div class="main_content">
+            <div id="content" class="content_index">
 
                 <!-- SECTION "Adopt Today" -->
                 <div class="content_section" id="section_adopt">

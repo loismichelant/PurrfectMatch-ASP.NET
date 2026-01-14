@@ -36,7 +36,7 @@
             <div id="sidebar" class="sidebar">
 
                 <div class="sidebar_account">
-                    <a href="#" id="lnkAccount">
+                    <a href="<%= ResolveUrl("~/UI/AccountDetails.aspx") %>" id="lnkAccount">
                         <img src="../Resources/Icons/account.svg" id="img_account" />
                     </a>
                     <div class="account_text">
@@ -56,7 +56,7 @@
                 <!-- REQUEST SECTION -->
                 <div class="panel panel_requests">
 
-                    <p class="request_title">Adoption Request</p>
+                    <p class="request_title adoption_title">Adoption Request</p>
 
                     <!-- SELECT A CAT -->
                     <div class="request_field">
@@ -70,17 +70,17 @@
                         <asp:TextBox ID="txtLetter" runat="server" CssClass="request_textarea" TextMode="MultiLine" Rows="8"></asp:TextBox>
                     </div>
 
-                    <asp:Label ID="lblMessage" runat="server" CssClass="message_confirmation"></asp:Label>
+                    <asp:Label ID="lblMessage" runat="server" CssClass="message request_confirmation"></asp:Label>
 
                     <!-- SUBMIT BUTTON -->
-                    <asp:Button ID="btnSubmit" runat="server" CssClass="request_button" Text="Submit Request" />
+                    <asp:Button ID="btnSubmit" runat="server" CssClass="btn_request" Text="Submit Request" />
 
                 </div>
 
                 <!-- REQUEST HISTORY PANEL -->
                 <asp:Panel ID="pnlRequestHistory" runat="server"  CssClass="panel panel_history" Visible="false">
 
-                    <p class="request_title">My Previous Adoption Requests</p>
+                    <p class="request_title history_title">My Previous Adoption Requests</p>
 
                     <!-- Un Repeater pour afficher chaque demande -->
                     <asp:Repeater ID="rptRequests" runat="server">
