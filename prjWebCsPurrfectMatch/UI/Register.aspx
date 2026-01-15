@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="prjWebCsPurrfectMatch.UI.Register" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="prjWebCsPurrfectMatch.UI.Register" MaintainScrollPositionOnPostback="true" %>
 
 <!DOCTYPE html>
 
@@ -36,49 +36,50 @@
             <!-- MAIN CONTENT -->
             <div id="content" class="content">
                 <div class="form_register">
+                    <div class="register_form_container">
     
-                    <h2 class="register_title">JOIN OUR COMMUNITY</h2>
-                    <p class="register_subtitle">Create your account to connect, share, and help animals find loving homes.</p>
+                        <p class="form_title">JOIN OUR COMMUNITY</p>
+                        <p class="form_subtitle">Create your account to connect, share, and help animals find loving homes.</p>
 
-                    <!-- Champs de saisie -->
-                    <div class="form_line_double">
-                        <asp:TextBox ID="txtFirstName" runat="server" placeholder="First Name" CssClass="form_input_inline"></asp:TextBox>
-                        <asp:TextBox ID="txtLastName" runat="server" placeholder="Last Name" CssClass="form_input_inline"></asp:TextBox>
-                    </div>
+                        <!-- Champs de saisie -->
+                        <div class="form_line_double">
+                            <asp:TextBox ID="txtFirstName" runat="server" placeholder="First Name" CssClass="form_input_inline"></asp:TextBox>
+                            <asp:TextBox ID="txtLastName" runat="server" placeholder="Last Name" CssClass="form_input_inline"></asp:TextBox>
+                        </div>
                     
-                    <div class="form_line_horizontal">
-                        <asp:Label ID="lblBirthDate" AssociatedControlID="txtBirthDate" runat="server" Text="Birth Date :" CssClass="form_label_inline"></asp:Label>
-                        <asp:TextBox ID="txtBirthDate" runat="server" TextMode="Date" CssClass="form_input_inline"></asp:TextBox>
-                    </div>
+                        <div class="form_line_horizontal">
+                            <asp:Label ID="lblBirthDate" AssociatedControlID="txtBirthDate" runat="server" Text="Birth Date :" CssClass="form_label_inline"></asp:Label>
+                            <asp:TextBox ID="txtBirthDate" runat="server" TextMode="Date" CssClass="form_input_inline"></asp:TextBox>
+                        </div>
 
-                    <div class="form_line">
-                        <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" placeholder="Email" CssClass="form_input_inline"></asp:TextBox>
-                    </div>
+                        <div class="form_line">
+                            <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" placeholder="Email" CssClass="form_input_inline"></asp:TextBox>
+                        </div>
                     
-                    <div class="form_line">
-                        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="Password" CssClass="form_input_inline"></asp:TextBox>
-                    </div>
+                        <div class="form_line">
+                            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="Password" CssClass="form_input_inline"></asp:TextBox>
+                        </div>
 
-                    <div class="form_line">
-                        <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password" placeholder="Confirm Password" CssClass="form_input_inline"></asp:TextBox>
-                    </div>
+                        <div class="form_line">
+                            <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password" placeholder="Confirm Password" CssClass="form_input_inline"></asp:TextBox>
+                        </div>
 
-                    <div class="form_line">
-                        <asp:Button ID="btnRegister" runat="server" Text="Create Account" CssClass="btn_third" />
-                    </div>
+                        <div class="form_line">
+                            <asp:Button ID="btnRegister" runat="server" Text="Create Account" CssClass="btn_form" />
+                        </div>
 
-                    <!-- Message de validation / erreur -->
-                    <div class="form_message">
-                        <asp:Label ID="lblMessage" runat="server"></asp:Label>
-                    </div>
+                        <!-- Message de validation / erreur -->
+                        <div class="message form_message">
+                            <asp:Label ID="lblMessage" runat="server"></asp:Label>
+                        </div>
                     
-                    <!-- Lien vers l’inscription -->
-                    <div class="form_link_login">
-                        <asp:HyperLink ID="lnkLogin2" runat="server" NavigateUrl="~/UI/Login.aspx" Text="Already have an account? Log in here!"></asp:HyperLink>
-                    </div>
+                        <!-- Lien vers l’inscription -->
+                        <div class="form_link">
+                            <asp:HyperLink ID="lnkLogin2" runat="server" NavigateUrl="~/UI/Login.aspx" Text="Already have an account? Log in here!"></asp:HyperLink>
+                        </div>
 
+                    </div>
                 </div>
-
             </div>
 
             <!-- FOOTER -->

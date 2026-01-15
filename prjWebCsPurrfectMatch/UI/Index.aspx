@@ -33,48 +33,47 @@
                     </div>
                 </div>
 
-            </div>
-
-            <!-- MAIN CONTENT -->
-            <div id="content" class="content_index">
-
                 <!-- SECTION "Adopt Today" -->
-                <div class="content_section" id="section_adopt">
+                <div class="section_adopt">
 
                     <div class="adopt_left">
                         <p class="adopt_text" id="top_join">Adopt Today!</p>
-                        <asp:Button ID="btnGoLogin" runat="server" Text="Log In" CssClass="btn_main" />
-                        <asp:Button ID="btnGoRegister1" runat="server" Text="Register" CssClass="btn_main" />
+                        <asp:Button ID="btnGoLogin" runat="server" Text="Log In" CssClass="btn_adopt" />
+                        <asp:Button ID="btnGoRegister1" runat="server" Text="Register" CssClass="btn_adopt" />
                     </div>
 
                     <div class="adopt_right">
                         <img src="../Resources/Images/pic_cat_laying.png" class="img_fullcat" alt="Cat laying down" />
                     </div>
                 </div>
+            </div>
+
+            <!-- MAIN CONTENT -->
+            <div id="content" class="content_index">
 
                 <!-- SECTION "Join The Family" -->
                 <div class="content_section" id="section_join">
 
                     <div class="section_join_top">
                         <div class="join_card_left">
-                            <asp:Button ID="btnGoRegister2" runat="server" Text="Donate" CssClass="btn_secondary" />
+                            <asp:Button ID="btnGoRegister2" runat="server" Text="Donate" CssClass="btn_action" />
                             <p class="join_text">Your support helps us provide food, medical care, and a safe place for cats in need. Every contribution makes a difference.</p>
                         </div>
 
                         <div class="join_card_right">
-                            <asp:Button ID="btnGoRegister3" runat="server" Text="Adopt" CssClass="btn_secondary" />
+                            <asp:Button ID="btnGoRegister3" runat="server" Text="Adopt" CssClass="btn_action" />
                             <p class="join_text">Ready to welcome a furry friend into your life?<br />Discover loving cats looking for their forever homes.</p>
                         </div>
                     </div>
 
                     <div class="section_join_bottom">
                         <div class="join_card_left">
-                            <asp:Button ID="btnGoRegister4" runat="server" Text="Foster" CssClass="btn_secondary" />
+                            <asp:Button ID="btnGoRegister4" runat="server" Text="Foster" CssClass="btn_action" />
                             <p class="join_text" id="top_story">Become a foster hero! Open your home temporarily and help a cat feel safe while awaiting adoption.</p>
                         </div>
 
                         <div class="join_card_right">
-                            <asp:Button ID="btnGoRegister5" runat="server" Text="Volunteer" CssClass="btn_secondary" />
+                            <asp:Button ID="btnGoRegister5" runat="server" Text="Volunteer" CssClass="btn_action" />
                             <p class="join_text">Give your time and heart. Join our volunteer team and help care for our cats, events, and community outreach.</p>
                         </div>
                     </div>
@@ -83,7 +82,7 @@
                 <!-- SECTION "Our Story" -->
                 <div class="content_section" id="section_story">
                     <div class="story_left">
-                        <h2 class="story_text">Our Story</h2>
+                        <h2 class="section_title">Our Story</h2>
                         <p><span style="color:#622815; font-weight:700;">Purrfect Match</span> began with a simple mission: to <span style="color:#ffedd4; font-weight:700;">give every cat a chance at a happy, loving life</span>. What started as a small volunteer effort has grown into a <span style="color:#ffedd4; font-style:italic;">passionate community</span> of caretakers, foster heroes, and adopters.</p>
                         <p>We rescue abandoned, neglected, and homeless cats, <span style="color:#ffedd4; font-weight:700;">offering medical care, safety, and comfort</span> while we search for the right home for each one. Whether they're shy, playful, or full of quirky charm, every cat deserves to be <span style="color:#ffedd4; font-weight:700;">seen, loved, and understood</span>.</p>
                         <p id="top_contact">With your support, we continue building a world where <span style="color:#ffedd4; font-weight:700;">every paw finds a soft place to land</span>. Together, we turn meows into second chances and create forever families - <span style="color:#ffedd4; font-weight:700; font-style:italic;">one purr at a time</span>.</p>
@@ -96,13 +95,13 @@
 
                 <!-- SECTION "Contact Us" -->
                 <div class="content_section" id="section_contact">
-                    <p class="contact_title">Get In Touch With Us</p>
+                    <p class="section_title" id="title_contact">Get In Touch With Us</p>
                     <p class="contact_text">Have questions about adoption, fostering, or volunteering? We’d love to hear from you.<br />Sign up for updates and stay connected with our rescue family.</p>
 
                     <div class="container_searchbar_and_button">
                         <div>
                             <asp:TextBox ID="txtEmail" runat="server" CssClass="searchbar"></asp:TextBox>
-                            <asp:Button ID="btnSubscribe" runat="server" Text="Subscribe" CssClass="btn_secondary" />
+                            <asp:Button ID="btnSubscribe" runat="server" Text="Subscribe" CssClass="btn_subscribe" />
                         </div>
                     </div>
                     <!-- Message de notification -->

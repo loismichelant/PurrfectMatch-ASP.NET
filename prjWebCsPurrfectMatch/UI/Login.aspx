@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="prjWebCsPurrfectMatch.UI.Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="prjWebCsPurrfectMatch.UI.Login" MaintainScrollPositionOnPostback="true" %>
 
 <!DOCTYPE html>
 
@@ -36,37 +36,36 @@
             <!-- MAIN CONTENT -->
             <div id="content" class="content">
                 <div class="form_login">
+                    <div class="login_form_container">
     
-                    <p class="login_title">WELCOME BACK !</p>
-                    <p class="login_subtitle">Log in to continue caring, sharing, and adopting with us.</p>
+                        <p class="form_title">WELCOME BACK !</p>
+                        <p class="form_subtitle">Log in to continue caring, sharing, and adopting with us.</p>
     
-                    <!-- Champs de saisie -->
-                    <div class="form_lines">
+                        <!-- Champs de saisie -->
                         <div class="form_line">
-                            <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" placeholder="Email"></asp:TextBox>
+                            <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" placeholder="Email" CssClass="form_input_inline"></asp:TextBox>
                         </div>
         
                         <div class="form_line">
-                            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="Password"></asp:TextBox>
+                            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="Password" CssClass="form_input_inline"></asp:TextBox>
                         </div>
 
                         <div class="form_line">
-                            <asp:Button ID="btnLogin" runat="server" Text="Log In" CssClass="btn_third" />
+                            <asp:Button ID="btnLogin" runat="server" Text="Log In" CssClass="btn_form" />
                         </div>
-                    </div>
 
-                    <!-- Message de validation / erreur -->
-                    <div class="form_message">
-                        <asp:Label ID="lblMessage" runat="server"></asp:Label>
-                    </div>
+                        <!-- Message de validation / erreur -->
+                        <div class="message form_message">
+                            <asp:Label ID="lblMessage" runat="server"></asp:Label>
+                        </div>
 
-                    <!-- Lien vers l’inscription -->
-                    <div class="form_link_register">
-                        <asp:HyperLink ID="lnkRegister2" runat="server" NavigateUrl="~/UI/Register.aspx" Text="Not registered yet? Create an account"></asp:HyperLink>
-                    </div>
+                        <!-- Lien vers l’inscription -->
+                        <div class="form_link">
+                            <asp:HyperLink ID="lnkRegister2" runat="server" NavigateUrl="~/UI/Register.aspx" Text="Not registered yet? Create an account"></asp:HyperLink>
+                        </div>
 
+                    </div>
                 </div>
-
             </div>
 
             <!-- FOOTER -->
