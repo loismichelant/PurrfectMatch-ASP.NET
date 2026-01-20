@@ -38,8 +38,8 @@
 
                     <div class="adopt_left">
                         <p class="adopt_text" id="top_join">Adopt Today!</p>
-                        <asp:Button ID="btnGoLogin" runat="server" Text="Log In" CssClass="btn_adopt" />
-                        <asp:Button ID="btnGoRegister1" runat="server" Text="Register" CssClass="btn_adopt" />
+                        <asp:Button ID="btnGoLogin" OnClick="btnGoLogin_Click" runat="server" Text="Log In" CssClass="btn_adopt" />
+                        <asp:Button ID="btnGoRegister1" OnClick="btnGoRegister1_Click" runat="server" Text="Register" CssClass="btn_adopt" />
                     </div>
 
                     <div class="adopt_right">
@@ -56,24 +56,24 @@
 
                     <div class="section_join_top">
                         <div class="join_card_left">
-                            <asp:Button ID="btnGoRegister2" runat="server" Text="Donate" CssClass="btn_action" />
+                            <asp:Button ID="btnGoRegister2" OnClick="btnGoRegister2_Click" runat="server" Text="Donate" CssClass="btn_action" />
                             <p class="join_text">Your support helps us provide food, medical care, and a safe place for cats in need. Every contribution makes a difference.</p>
                         </div>
 
                         <div class="join_card_right">
-                            <asp:Button ID="btnGoRegister3" runat="server" Text="Adopt" CssClass="btn_action" />
+                            <asp:Button ID="btnGoRegister3" OnClick="btnGoRegister3_Click" runat="server" Text="Adopt" CssClass="btn_action" />
                             <p class="join_text">Ready to welcome a furry friend into your life?<br />Discover loving cats looking for their forever homes.</p>
                         </div>
                     </div>
 
                     <div class="section_join_bottom">
                         <div class="join_card_left">
-                            <asp:Button ID="btnGoRegister4" runat="server" Text="Foster" CssClass="btn_action" />
+                            <asp:Button ID="btnGoRegister4" OnClick="btnGoRegister4_Click" runat="server" Text="Foster" CssClass="btn_action" />
                             <p class="join_text" id="top_story">Become a foster hero! Open your home temporarily and help a cat feel safe while awaiting adoption.</p>
                         </div>
 
                         <div class="join_card_right">
-                            <asp:Button ID="btnGoRegister5" runat="server" Text="Volunteer" CssClass="btn_action" />
+                            <asp:Button ID="btnGoRegister5" OnClick="btnGoRegister5_Click" runat="server" Text="Volunteer" CssClass="btn_action" />
                             <p class="join_text">Give your time and heart. Join our volunteer team and help care for our cats, events, and community outreach.</p>
                         </div>
                     </div>
@@ -101,7 +101,7 @@
                     <div class="container_searchbar_and_button">
                         <div>
                             <asp:TextBox ID="txtEmail" runat="server" CssClass="searchbar"></asp:TextBox>
-                            <asp:Button ID="btnSubscribe" runat="server" Text="Subscribe" CssClass="btn_subscribe" />
+                            <asp:Button ID="btnSubscribe" OnClick="btnSubscribe_Click" runat="server" Text="Subscribe" CssClass="btn_subscribe" />
                         </div>
                     </div>
                     <!-- Message de notification -->

@@ -65,7 +65,7 @@
                         </div>
 
                         <div class="form_line">
-                            <asp:Button ID="btnRegister" runat="server" Text="Create Account" CssClass="btn_form" />
+                            <asp:Button ID="btnRegister" OnClick="btnRegister_Click" runat="server" Text="Create Account" CssClass="btn_form" />
                         </div>
 
                         <!-- Message de validation / erreur -->

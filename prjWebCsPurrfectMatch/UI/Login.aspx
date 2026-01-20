@@ -51,7 +51,7 @@
                         </div>
 
                         <div class="form_line">
-                            <asp:Button ID="btnLogin" runat="server" Text="Log In" CssClass="btn_form" />
+                            <asp:Button ID="btnLogin" OnClick="btnLogin_Click" runat="server" Text="Log In" CssClass="btn_form" />
                         </div>
 
                         <!-- Message de validation / erreur -->
