@@ -519,13 +519,17 @@ input[type="submit"].btn_adopt {
     justify-content: center;
     align-items: center;
     gap: 12px;
-    margin-bottom: 25px;
+    max-width: 650px;
+    margin: auto;
+}
+
+.btn_subscribe {
+    flex: 0 0 auto;
+    max-width: 200px;
 }
 
 #section_contact #txtEmail {
-    width: 500px;
     letter-spacing: 2px;
-    max-width: 90%;
     padding: 18px 25px;
     border-radius: 35px;
     font-size: 1.1rem;
@@ -534,6 +538,8 @@ input[type="submit"].btn_adopt {
     color: #622815;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
+    width: auto;
+    max-width: 100%;
 }
 
 #section_contact #txtEmail:focus {
@@ -541,6 +547,11 @@ input[type="submit"].btn_adopt {
     border-color: #f4a76f;
     background-color: #ffffff;
     box-shadow: 0 0 10px rgba(244, 167, 111, 0.5);
+}
+
+#lblNotification {
+    margin-top: 20px;
+    display: block;
 }
 
 

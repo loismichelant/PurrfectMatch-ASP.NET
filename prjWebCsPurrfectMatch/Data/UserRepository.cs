@@ -45,7 +45,7 @@ namespace prjWebCsPurrfectMatch.Data
             cmd.Parameters.AddWithValue("@password", user.PasswordHash);
             cmd.Parameters.AddWithValue("@birthDate", user.BirthDate);
             cmd.Parameters.AddWithValue("@accountCreated", user.AccountCreated);
-            cmd.Parameters.AddWithValue("@userRole", user.UserRole.ToString());
+            cmd.Parameters.AddWithValue("@userRole", (int)user.UserRole);
 
             int rows = cmd.ExecuteNonQuery();
 
@@ -85,7 +85,7 @@ namespace prjWebCsPurrfectMatch.Data
                 Email = dr["Email"].ToString().Trim(),
                 BirthDate = Convert.ToDateTime(dr["BirthDate"]),
                 AccountCreated = Convert.ToDateTime(dr["AccountCreated"]),
-                UserRole = (UserRole)Enum.Parse(typeof(UserRole), dr["UserRole"].ToString())
+                UserRole = (UserRole)Convert.ToInt32(dr["UserRole"])
             };
         }
     }

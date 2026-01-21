@@ -99,10 +99,8 @@
                     <p class="contact_text">Have questions about adoption, fostering, or volunteering? We’d love to hear from you.<br />Sign up for updates and stay connected with our rescue family.</p>
 
                     <div class="container_searchbar_and_button">
-                        <div>
                             <asp:TextBox ID="txtEmail" runat="server" CssClass="searchbar"></asp:TextBox>
                             <asp:Button ID="btnSubscribe" OnClick="btnSubscribe_Click" runat="server" Text="Subscribe" CssClass="btn_subscribe" />
-                        </div>
                     </div>
                     <!-- Message de notification -->
                     <asp:Label ID="lblNotification" runat="server" Text=""></asp:Label>
