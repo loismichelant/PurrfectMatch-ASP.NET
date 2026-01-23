@@ -27,7 +27,7 @@
                      
                     <!-- Navigation Links -->
                     <div class="header_block header_links">
-                        <asp:LinkButton ID="lnkBtnLogout" runat="server" Text="Log Out" CssClass="header_link"></asp:LinkButton>
+                        <asp:LinkButton ID="lnkBtnLogout" OnClick="lnkBtnLogout_Click" runat="server" Text="Log Out" CssClass="header_link"></asp:LinkButton>
                     </div>
                 </div>
             </div>
@@ -94,12 +94,13 @@
 
                     <!-- BUTTON FILTER -->
                     <div class="filter_actions">
-                        <asp:Button ID="btnApplyFilters" runat="server" Text="Apply Filters" CssClass="btn_filter" />
+                        <asp:Button ID="btnApplyFilters" OnClick="btnApplyFilters_Click" runat="server" Text="Apply Filters" CssClass="btn_filter" />
                     </div>
                 </div>
 
                 <!-- CAT CARDS -->
                 <div class="panel cats_grid">
+                    <asp:Label ID="lblMessageCats" runat="server" CssClass="message_cats" Visible="false"></asp:Label>
                     <asp:Repeater ID="rptCats" runat="server">
                         <ItemTemplate>
                             <div class="cat_card">

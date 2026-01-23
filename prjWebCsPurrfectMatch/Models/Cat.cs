@@ -19,6 +19,7 @@ namespace prjWebCsPurrfectMatch.Models
         public CatGender? Gender { get; set; }                          // Cat gender
         public CatFurColor? FurColor { get; set; }                      // Fur color category
         public CatFurLength? FurLength { get; set; }                    // Fur length category
+        public CatEnergyLevel? EnergyLevel { get; set; }                //
         public bool? CompatibilityKids { get; set; }                    // Compatibility with children
         public bool? CompatibilityCats { get; set; }                    // Compatibility with other cats
         public bool? CompatibilityDogs { get; set; }                    // Compatibility with dogs

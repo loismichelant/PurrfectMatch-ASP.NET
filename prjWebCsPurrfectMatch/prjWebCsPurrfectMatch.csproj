@@ -73,6 +73,11 @@
     </Content>
     <Content Include="Resources\Icons\account.svg" />
     <Content Include="Resources\Icons\arrow_right.svg" />
+    <Content Include="Resources\Images\cat_bella.png" />
+    <Content Include="Resources\Images\cat_cleo.jpg" />
+    <Content Include="Resources\Images\cat_luna.png" />
+    <Content Include="Resources\Images\cat_milo.jpg" />
+    <Content Include="Resources\Images\cat_shadow.jpg" />
     <Content Include="Resources\Images\logo_name.png" />
     <Content Include="Resources\Images\logo_paw.png" />
     <Content Include="Resources\Images\pic_cat_face.png" />
@@ -89,8 +94,10 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\CatRepository.cs" />
     <Compile Include="Data\DBConnection.cs" />
     <Compile Include="Data\UserRepository.cs" />
+    <Compile Include="Helpers\DisplayFormatterHelper.cs" />
     <Compile Include="Helpers\InputValidator.cs" />
     <Compile Include="Helpers\PasswordHelper.cs" />
     <Compile Include="Models\Cat.cs" />
@@ -105,6 +112,7 @@
     <Compile Include="Models\Request.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CatService.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="UI\AccountDetails.aspx.cs">
       <DependentUpon>AccountDetails.aspx</DependentUpon>

@@ -27,7 +27,7 @@
 
                     <!-- Navigation Links -->
                     <div class="header_block header_links">
-                        <asp:LinkButton ID="lnkBtnLogout" runat="server" Text="Log Out" CssClass="header_link"></asp:LinkButton>
+                        <asp:LinkButton ID="lnkBtnLogout" OnClick="lnkBtnLogout_Click" runat="server" Text="Log Out" CssClass="header_link"></asp:LinkButton>
                     </div>
                 </div>
             </div>

@@ -639,6 +639,15 @@ a, a:visited, a:hover, a:active, a:focus {
     filter: brightness(0) saturate(100%) invert(22%) sepia(17%) saturate(1300%) hue-rotate(336deg) brightness(92%) contrast(85%);
 }
 
+.message_cats {
+    width: 100%;
+    text-align: center;
+    font-family: monospace;
+    font-size: 1.2rem;
+    color: #622815;
+    padding: 25px 0 40px 0;
+}
+
 
 /* === 3. SPECIFIC TO ADOPTION REQUEST PAGE === */
 .request_field {

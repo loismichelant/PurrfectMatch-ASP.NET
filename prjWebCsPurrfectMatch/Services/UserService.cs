@@ -36,5 +36,10 @@ namespace prjWebCsPurrfectMatch.Services
             return repo.FindByEmailAndPassword(email, password);
         }
 
+        public void Logout()
+        {
+            System.Web.HttpContext.Current.Session.Clear();
+            System.Web.HttpContext.Current.Session.Abandon();
+        }
     }
 }
